@@ -1,7 +1,7 @@
 <div class="bg-img">
 <div class="container">
     <h1>REGISTER</h1>
-    <form (ngSubmit)="onRegister()"></form>
+    <form (ngSubmit)="onRegister()">
         <div class="form-group">
             <label for="first"><b>First Name</b></label>
             <input type="text" class="form-control" required [(ngModel)]="user.FirstName" name="FirstName">
@@ -25,5 +25,6 @@
         </div>
             <button type="submit">Register</button>
             <button type="submit">Login</button>
-        
+    </form>
+</div>
 
