@@ -25,7 +25,7 @@
                 <button (click) = "showUsersList()"> View all users</button>
                 <br>
                 <button (click) = "showDetails()"> Add Business</button>
-            
+                
             <!-- Modal -->
             <div class="modal fade" id="deleteProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -57,6 +57,7 @@
         <app-post-form ></app-post-form>
     </div>
     <div  *ngIf= "showUsers">
-       <app-users></app-users>
-    </div>
+        <app-users></app-users>
+     </div>
+    
 </div>

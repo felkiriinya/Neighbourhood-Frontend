@@ -3,7 +3,7 @@
 
 export interface User {
     url: string;
-    username: string;
+    name: string;
     email: string;
     is_staff: boolean;
   }
