@@ -15,25 +15,25 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  // private handleError<T>(operation = 'operation', result?: T) {
-  //   return (error: any): Observable<T> => {
-  //     // TODO: send the error to remote logging infrastructure
-  //     console.error(error); // log to console instead
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      // TODO: send the error to remote logging infrastructure
+      console.error(error); // log to console instead
 
-  //     // TODO: better job of transforming error for user consumption
-  //     console.log(`${operation} failed: ${error.message}`);
+      // TODO: better job of transforming error for user consumption
+      console.log(`${operation} failed: ${error.message}`);
 
-  //     // Let the app keep running by returning an empty result.
-  //     return of(result as T);
-  //   };
-  // }
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    };
+  }
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.apiRoot).pipe(
       tap((_) => {
         console.log('fetched users');
       }),
-      // catchError(this.handleError<User[]>('geUsers', []))
+      catchError(this.handleError<User[]>('geUsers', []))
     );
   }
 }
