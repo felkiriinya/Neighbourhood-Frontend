@@ -11,7 +11,7 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  private apiRoot = 'https://fel-awards.herokuapp.com/api/merch/';
+  private apiRoot = 'https://rayneighborhood.herokuapp.com/api/occupantlist/';
 
   constructor(private http: HttpClient) {}
 

@@ -16,8 +16,8 @@
               <tr *ngFor="let user of users; index as i">
                 <th scope="row"><a routerLink="/user/{{ i }}">View</a></th>
                 <td>{{ user.name }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.is_staff }}</td>
+                <td>{{ user.neighbourhood }}</td>
+                <!-- <td>{{ user. }}</td> -->
               </tr>
             </tbody>
           </table>
