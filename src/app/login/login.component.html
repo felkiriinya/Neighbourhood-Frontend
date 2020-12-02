@@ -1,15 +1,21 @@
-<!-- <div class="bg-img">
+<div class="row mt-5">
+  <div class="col-md-8">
+    <h3 class="center">Log in</h3>
     <form>
-        <h1>Login</h1>
-        <div class="form-group">
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-    
-            <button type="submit" class="btn">Login</button>
-        </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input #username type="text" class="form-control" id="username" />
+      </div>
+      <div class="form-group">
+        <label for="username">Password</label>
+        <input #password type="password" class="form-control" id="password" />
+      </div>
+      <button
+        type="button"
+        (click)="login(username.value, password.value)"
+        class="btn btn-primary">
+        Login
+      </button>
     </form>
-</div> -->
+  </div>
+</div>
