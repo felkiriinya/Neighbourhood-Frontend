@@ -7,15 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NeighbourhoodComponent implements OnInit {
   showForm=false;
+  showUsers=false;
+
+ 
 
   showDetails() {
     this.showForm = !this.showForm
     
   }  
-  constructor() { }
+  showUsersList(){
+    this.showUsers= !this.showUsers
+  }
+  constructor( ) { }
 
   ngOnInit(){
       this.showForm = false;
+      this.showUsers =false;
+     
   }
 
 }

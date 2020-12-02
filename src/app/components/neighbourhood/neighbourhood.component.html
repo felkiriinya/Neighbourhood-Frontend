@@ -14,6 +14,7 @@
                 <span>NAME :</span><br><br><span>ROLE :</span><br><br><span>NEIGHBOURHOOD :</span><br><br><span>USERS
                     COUNT :</span></div>
         </div>
+       
         <div class="card">
             <h6 style="padding-top: 0;">ACCOUNT ACTIONS</h6>
             
@@ -21,9 +22,9 @@
                 <br>
                 <button (click) = "showDetails()"> View neighbourhoods</button>
                 <br>
-                <button (click) = "showDetails()"> View all users</button>
+                <button (click) = "showUsersList()"> View all users</button>
                 <br>
-                <!-- <button (click) = "showDetails()"> Add Business</button> -->
+                <button (click) = "showDetails()"> Add Business</button>
             
             <!-- Modal -->
             <div class="modal fade" id="deleteProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -54,5 +55,8 @@
     </div>
     <div  *ngIf= "showForm">
         <app-post-form ></app-post-form>
+    </div>
+    <div  *ngIf= "showUsers">
+       <app-users></app-users>
     </div>
 </div>

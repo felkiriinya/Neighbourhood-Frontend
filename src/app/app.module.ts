@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NeighbourhoodComponent } from './components/neighbourhood/neighbourhood.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
+import { UsersComponent } from './components/users/users.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PostFormComponent } from './components/post-form/post-form.component';
     AppComponent,
     NavBarComponent,
     NeighbourhoodComponent,
-    PostFormComponent
+    PostFormComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
