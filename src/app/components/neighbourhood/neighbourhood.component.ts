@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./neighbourhood.component.css']
 })
 export class NeighbourhoodComponent implements OnInit {
+  showForm=false;
 
+  showDetails() {
+    this.showForm = !this.showForm
+    
+  }  
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+      this.showForm = false;
   }
 
 }

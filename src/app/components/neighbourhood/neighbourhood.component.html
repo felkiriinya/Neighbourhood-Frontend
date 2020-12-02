@@ -15,15 +15,16 @@
                     COUNT :</span></div>
         </div>
         <div class="card">
-            <span>ACCOUNT ACTIONS</span>
-            <ul>
-                <li><a href="">Make Post</a></li>
-                <li><a href="">Add business</a></li>
-                <li><a href="">Change profile photo</a></li>
-                <li><a href="">Change password</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#deleteProfile">Delete profile</a></li>                 
-                        
-            </ul>
+            <h6 style="padding-top: 0;">ACCOUNT ACTIONS</h6>
+            
+                <button (click) = "showDetails()"> Create a neighbourhood</button>
+                <br>
+                <button (click) = "showDetails()"> View neighbourhoods</button>
+                <br>
+                <button (click) = "showDetails()"> View all users</button>
+                <br>
+                <!-- <button (click) = "showDetails()"> Add Business</button> -->
+            
             <!-- Modal -->
             <div class="modal fade" id="deleteProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -44,10 +45,14 @@
                     </div>
                 </div>
             </div>  
+
+            
         </div>
     </div>
     <div class="map">
        
     </div>
-  
+    <div  *ngIf= "showForm">
+        <app-post-form ></app-post-form>
+    </div>
 </div>

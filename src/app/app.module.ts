@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NeighbourhoodComponent } from './components/neighbourhood/neighbourhood.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    NeighbourhoodComponent
+    NeighbourhoodComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,
