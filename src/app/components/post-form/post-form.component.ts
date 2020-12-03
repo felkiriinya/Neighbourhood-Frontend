@@ -23,7 +23,7 @@ export class PostFormComponent implements OnInit {
   constructor(private neighbourhoodService: NeighbourhoodService, private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.neighbourhoods = this._route.snapshot.data.resolvedTodos || [];
+    this.getNeighbourhoods()
   }
 
 }
