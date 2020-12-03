@@ -8,7 +8,7 @@ import { Business } from '../models/business';
   providedIn: 'root'
 })
 export class BusinessService {
-  private apiRoot = '';
+  private apiRoot = 'https://rayneighborhood.herokuapp.com/api/business/';
 
   constructor(private http: HttpClient) {}
 
