@@ -9,23 +9,25 @@
                 <th scope="col">Name</th>
                 <th scope="col">Occupants</th>
                 <th scope="col">Location</th>
-                <th scope="col">Businesses</th>
+                <!-- <th scope="col">Businesses</th> -->
                 <th scope="col">Contact</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let neighbourhood of neighbourhoods; index as i">
-                <th scope="row"><a routerLink="/user/{{ i }}">View</a></th>
+                <!-- <th scope="row"><a routerLink="/user/{{ i }}">View</a></th> -->
                 <td>{{neighbourhood.name }}</td>
                 <td>{{ neighbourhood.occupants }}</td>
                 <td>{{ neighbourhood.location }}</td>
+                <td>{{neighbourhood.emergencyNo}}</td>
                 <td><a href="" data-toggle="modal" data-target="#deleteProfile">Delete Neighbourhood</a></td>
+                <td><a href="" data-toggle="modal" data-target="">Edit Neighbourhood Information</a></td>
                 <!-- Modal -->
             <div class="modal fade" id="deleteProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">  
-                            <h5 class="bolden">{{profile.username}}</h5>                                                      
+                            <h5 class="bolden"></h5>                                                      
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>                            
