@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { CreateHoodComponent } from './components/create-hood/create-hood.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { LogoutComponent } from './logout/logout.component';
     RegisterComponent,
     LoginComponent,
     LogoutComponent,
+    CreateHoodComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
