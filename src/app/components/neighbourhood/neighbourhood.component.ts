@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Neighbourhood } from 'src/app/models/neighbourhood';
 
 @Component({
   selector: 'app-neighbourhood',
@@ -9,7 +10,18 @@ export class NeighbourhoodComponent implements OnInit {
   showForm=false;
   showUsers=false;
   createForm = false;
- 
+  neighbourhoods:Neighbourhood[];
+
+  
+  deletingNeighbourhood(deleteNeighbourhood, index){
+    if(deleteNeighbourhood){
+        let toDelete =confirm("Are you sure you want to delete this Neighbourhood?")
+
+        if(toDelete){
+            this.neighbourhoods.splice(index)
+        }
+    }
+}
 
   showDetails() {
     this.showForm = !this.showForm

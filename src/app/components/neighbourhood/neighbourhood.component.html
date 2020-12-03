@@ -55,7 +55,7 @@
        
     </div>
     <div  *ngIf= "showForm">
-        <app-post-form ></app-post-form>
+        <app-post-form [neighbourhoods]='neighbourhoods' (deleteNeighbourhood) ="deletingNeighbourhood($event,i) "></app-post-form>
     </div>
     <div  *ngIf= "showUsers">
         <app-users></app-users>

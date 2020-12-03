@@ -12,6 +12,8 @@ export class PostFormComponent implements OnInit {
   neighbourhoods:Neighbourhood[];
   error: any;
   newneighbourhoods: Neighbourhood[];
+
+  
   
   @Output() deleteNeighbourhood = new EventEmitter<boolean>();
 
@@ -29,6 +31,7 @@ export class PostFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNeighbourhoods()
+    
   }
 
 }
