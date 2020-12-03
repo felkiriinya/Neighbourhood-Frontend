@@ -10,6 +10,8 @@ export class NeighbourhoodComponent implements OnInit {
   showForm=false;
   showUsers=false;
   createForm = false;
+  businessList = false;
+  createBusiness = false;
   neighbourhoods:Neighbourhood[];
 
   
@@ -23,6 +25,12 @@ export class NeighbourhoodComponent implements OnInit {
     }
 }
 
+  showBusinessList(){
+    this.businessList = !this.businessList
+  }
+  showBusiness(){
+    this.createBusiness = !this.createBusiness
+  }
   showDetails() {
     this.showForm = !this.showForm
     

@@ -23,9 +23,12 @@
                 <br>
                 <button (click) = "showDetails()"> View neighbourhoods</button>
                 <br>
+                <button (click) = "showBusiness()"> Add a Business</button>
+                <br>
+                <button (click) = "showBusinessList()"> View all Businesses</button>
+                <br>
                 <button (click) = "showUsersList()"> View all users</button>
                 <br>
-                <button (click) = "showDetails()"> Add Business</button>
                 
             <!-- Modal -->
             <div class="modal fade" id="deleteProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -63,5 +66,10 @@
      <div  *ngIf= "createForm">
         <app-create-hood></app-create-hood>
      </div>
-    
+     <div  *ngIf= "createBusiness">
+        <app-create-business></app-create-business>
+     </div>
+     <div  *ngIf= "businessList">
+        <app-business></app-business>
+     </div>
 </div>
