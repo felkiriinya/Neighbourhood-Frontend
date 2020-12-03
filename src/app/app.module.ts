@@ -10,6 +10,13 @@ import { NeighbourhoodComponent } from './components/neighbourhood/neighbourhood
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { UsersComponent } from './components/users/users.component';
 import { ToastrModule } from 'ngx-toastr';
+import { FormsModule } from '@angular/forms';
+
+
+
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +24,10 @@ import { ToastrModule } from 'ngx-toastr';
     NavBarComponent,
     NeighbourhoodComponent,
     PostFormComponent,
-    UsersComponent
+    UsersComponent,
+    RegisterComponent,
+    LoginComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +37,8 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
