@@ -3,12 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { tap, catchError, shareReplay } from 'rxjs/operators';
 
-
-
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService {
+export class LoginService {
   private apiRoot = '';
 
   constructor(private http: HttpClient) {}
@@ -25,17 +23,12 @@ export class AuthService {
       return of(result as T);
     };
   }
-  signup(Firstname: string,Lastname: string, username: string,email: string, password: string) {
-    return this.http.post(this.apiRoot, { Firstname,Lastname,username,email,password }).pipe(
+  login(username: string, password: string) {
+    return this.http.post(this.apiRoot, { username,password }).pipe(
       tap((response) => {
         console.log('Neighbourhood response ', response);
       }),
       shareReplay()
     );
-  }
-  logout() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('refresh');
-    localStorage.removeItem('expires_at');
   }
 }
