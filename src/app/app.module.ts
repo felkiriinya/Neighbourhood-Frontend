@@ -19,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CreateHoodComponent } from './components/create-hood/create-hood.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { BusinessComponent } from './components/business/business.component';
+import { CreateBusinessComponent } from './components/create-business/create-business.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     LogoutComponent,
     CreateHoodComponent,
     ProfileComponent,
+    BusinessComponent,
+    CreateBusinessComponent,
   ],
   imports: [
     BrowserModule,
