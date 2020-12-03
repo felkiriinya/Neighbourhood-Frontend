@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Neighbourhood } from 'src/app/models/neighbourhood';
 import { NeighbourhoodService } from 'src/app/services/neighbourhood.service';
@@ -12,7 +12,12 @@ export class PostFormComponent implements OnInit {
   neighbourhoods:Neighbourhood[];
   error: any;
   newneighbourhoods: Neighbourhood[];
+  
+  @Output() deleteNeighbourhood = new EventEmitter<boolean>();
 
+    neighbourhoodDelete(deleteyes:boolean){
+        this.deleteNeighbourhood.emit(deleteyes);
+    }
   getNeighbourhoods(): void{
     this.neighbourhoodService.getNeighbourhoods().subscribe((data: Neighbourhood[]) => {
       this.neighbourhoods = data;
