@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap, shareReplay } from 'rxjs/operators';
 import * as moment from 'moment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -22,16 +23,8 @@ export class AuthService {
   get refresh(): string {
     return localStorage.getItem('refresh');
   }
-  register(FirstName: string,LastName: string, Username: string, Email: string, password: string) {
-    return this.http
-      .post(this.apiRoot.concat('token/'), { FirstName,LastName,Username,Email,password })
-      .pipe(
-        tap((response) => {
-          console.log({ response });
-          this.setSession(response);
-        }),
-        shareReplay()
-      );
+  signup(userData):Observable<any> {
+    return this.http.post('',userData);
   }
   login(username: string, password: string) {
     return this.http

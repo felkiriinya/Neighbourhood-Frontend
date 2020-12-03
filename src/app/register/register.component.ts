@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from '../hood/user.model';
-import { UserService } from '../hood/user.service';
+import { Component, OnInit } from '@angular/core';  
+import { AuthService } from '../hood/auth.service';
 import { Router } from '@angular/router';
 
 
@@ -10,10 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  user: User;
+  user;
   
 
-  constructor(private userService: UserService,private router: Router) { }
+  constructor(private authService: AuthService,private router: Router) { }
 
   ngOnInit(): void {
     this.user = {
@@ -24,8 +23,8 @@ export class RegisterComponent implements OnInit {
       Password: '',
       };
   }  
-  onRegister() {
-    this.userService.registerUser(this.user).subscribe(
+  signup() {
+    this.authService.signup(this.user).subscribe(
     response =>{
       alert('User' + this.user.UserName + 'created');
       this.router.navigate(['/neighbourhood']);
