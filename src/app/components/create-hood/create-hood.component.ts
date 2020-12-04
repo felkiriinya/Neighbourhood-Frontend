@@ -12,9 +12,9 @@ export class CreateHoodComponent implements OnInit {
   error: any;
   newneighbourhoods: Neighbourhood[];
 
-  addNeighbourhood(name: string, occupants: number, location: string, contact: number, definition: string) {
+  addNeighbourhood(name: string, occupants: number, location: string, contact: number, definition: string, admin:number) {
    
-    this.neighbourhoodService.createNeighbourhood(name,occupants,location,contact, definition).subscribe(
+    this.neighbourhoodService.createNeighbourhood(name,occupants,location,contact, definition,admin).subscribe(
       (success) => {
         alert('New neighbourhood created');
       },
