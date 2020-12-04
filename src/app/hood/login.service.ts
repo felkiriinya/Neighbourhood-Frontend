@@ -1,17 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap, shareReplay } from 'rxjs/operators';
-import { Observable, throwError, of } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
-import { User } from '../models/user';
-
+import { Observable, of } from 'rxjs';
+import { tap, catchError, shareReplay } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class UserService {
-
-  private apiRoot = 'https://rayneighborhood.herokuapp.com/api/occupantlist/';
+export class LoginService {
+  private apiRoot = 'https://rayneighborhood.herokuapp.com/api/token/';
 
   constructor(private http: HttpClient) {}
 
@@ -27,14 +23,12 @@ export class UserService {
       return of(result as T);
     };
   }
-
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.apiRoot).pipe(
-      tap((_) => {
-        console.log('fetched users');
+  login(username: string, password: string) {
+    return this.http.post(this.apiRoot, { username,password }).pipe(
+      tap((response) => {
+        console.log('Neighbourhood response ', response);
       }),
-      catchError(this.handleError<User[]>('getUsers', []))
+      shareReplay()
     );
   }
 }
-

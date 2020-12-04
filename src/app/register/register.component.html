@@ -1,34 +1,29 @@
 <div class="bg-img">
 <div class="container">
     <h3 class="text-center" style="padding-top: 2%;">Sign Up</h3>
-    <form (ngSubmit)="onRegister()">
+    <form>
         <div class="form-group">
             <label for="first"><b>First Name</b></label>
-            <input type="text" class="form-control" required [(ngModel)]="user.FirstName" name="FirstName">
+            <input type="text" class="form-control"  id="first_name" #first_name>
         </div>
         <div class="form-group">
             <label for="Last"><b>Last Name</b></label>
-            <input type="text" class="form-control" required [(ngModel)]="user.LastName" name="LastName">
+            <input type="text" class="form-control" id="last_name" #last_name>
         </div>
         <div class="form-group">
             <label for="Username"><b>Username</b></label>
-            <input type="text" class="form-control" required [(ngModel)]="user.UserName" name="UserName">
+            <input type="text" class="form-control" id="username" #username>
         </div>
         <div class="form-group">
-            <label for="email"><b>Email</b></label>
-            <input type="text" class="form-control" required [(ngModel)]="user.Email" name="Email">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" #password>
         </div>
-        <div class="form-group">
-            <label for="psw"><b>Password</b></label>
-            <input type="password"  name="psw" required>
-        
-        </div>
-        <button style="width: 100%; margin-top: 1%; margin-bottom: 5%;"
-      type="button"
-      
-      class="btn btn-primary">
-      Signup
-    </button>
+        <button style="width: 100%; margin-top: 3%; margin-bottom: 5%;"
+        type="button"
+        (click)="signup(first_name.value,last_name.value,username.value,password.value)"
+        class="btn btn-primary"><a href="/neighbourhood"></a>
+        Signup
+      </button>
         <p class="text-center" > Have an account? <a href="/login" style="color:#384997;">Sign in here</a></p> 
 
     </form>
