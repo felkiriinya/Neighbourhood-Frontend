@@ -2,11 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
-#### Neighbourhood is an front-end application 
+#### Neighbourhood is a neighbourhood mapping application. The front-end is made using angular while the RESTAPIs are generated using django
 #### By Felista Kiriinya and Kelvin Keya
-
-## Description
-
 
 ## Live link
 
