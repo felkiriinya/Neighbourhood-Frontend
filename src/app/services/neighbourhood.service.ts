@@ -25,8 +25,8 @@ export class NeighbourhoodService {
     };
   }
 
-  createNeighbourhood(name: string, occupants: number, location: string, contact: number, definition: string) {
-    return this.http.post(this.apiRoot, { name,occupants,location,contact, definition }).pipe(
+  createNeighbourhood(name: string, occupants: number, location: string, contact: number, definition: string,admin:number) {
+    return this.http.post(this.apiRoot, { name,occupants,location,contact, definition,admin }).pipe(
       tap((response) => {
         console.log('createNeighbourhood response ', response);
       }),

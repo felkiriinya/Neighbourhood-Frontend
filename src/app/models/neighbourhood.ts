@@ -3,7 +3,8 @@ export interface Neighbourhood {
         location:string,
         occupants:number,
         contact:number,
-        definition:string
+        definition:string,
+        admin:number
 
 
 }

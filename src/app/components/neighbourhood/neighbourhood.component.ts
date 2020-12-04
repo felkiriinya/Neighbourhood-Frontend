@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/hood/login.service';
+import { User } from 'src/app/hood/user.model';
 import { Neighbourhood } from 'src/app/models/neighbourhood';
 
 @Component({
@@ -13,7 +16,7 @@ export class NeighbourhoodComponent implements OnInit {
   businessList = false;
   createBusiness = false;
   neighbourhoods:Neighbourhood[];
-
+  user:User;
   
   deletingNeighbourhood(deleteNeighbourhood, index){
     if(deleteNeighbourhood){
@@ -43,13 +46,14 @@ export class NeighbourhoodComponent implements OnInit {
     this.createForm = !this.createForm
   }
 
-  constructor( ) { }
+  constructor(private userService: LoginService ,private http:HttpClient ) { }
 
   ngOnInit(){
       this.showForm = false;
       this.showUsers =false;
       this.createForm = false;
-     
+     this.userService.login;
+    console.log(this.user.username)
   }
 
 }
