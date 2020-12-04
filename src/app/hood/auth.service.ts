@@ -9,7 +9,7 @@ import { tap, catchError, shareReplay } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiRoot = '';
+  private apiRoot = 'https://rayneighborhood.herokuapp.com/auth/signup/';
 
   constructor(private http: HttpClient) {}
 
@@ -25,8 +25,8 @@ export class AuthService {
       return of(result as T);
     };
   }
-  signup(Firstname: string,Lastname: string, username: string,email: string, password: string) {
-    return this.http.post(this.apiRoot, { Firstname,Lastname,username,email,password }).pipe(
+  signup(first_name: string,last_name: string, username: string, password: string) {
+    return this.http.post(this.apiRoot, { first_name,last_name,username,password }).pipe(
       tap((response) => {
         console.log('Neighbourhood response ', response);
       }),

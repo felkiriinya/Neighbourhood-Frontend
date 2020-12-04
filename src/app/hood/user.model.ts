@@ -1,11 +1,10 @@
 export class User {
-    FirstName: string;
-    LastName: string;
-    UserName: string;
-    Email: string;
+    first_name: string;
+    last_name: string;
+    username: string;
     Password: string;
 }
 export class login {
-    Email: string;
+    email: string;
     Password: string;
 }
