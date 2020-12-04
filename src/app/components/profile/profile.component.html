@@ -1,18 +1,28 @@
-<!-- <app-nav-bar></app-nav-bar>
-<div class="container-fluid">
-    
-    <div class="top">
-        
-        
-  
-        <div style="padding-top: 3%;"><object data="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                type="image/png" >
-                <img class="img-thumbnail" src="{{user.profile_picture}}" alt="...">
-            </object> </div>
-        
-        <div class="card">
-            <div class="name">
-                <span>NAME :</span> <br><br><span>ROLE :</span><br><br><span>NEIGHBOURHOOD :</span><br><br><span>BIO:
-                   {{user.bio}} </span> </div>
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <h3 class="text-center" style="padding-top: 6%;">Profile</h3>
+    <form>
+        <div class="form-group">
+            <label for="first"><b>First Name</b></label>
+            <input type="text" class="form-control"  id="first_name" #first_name>
         </div>
-        -->
+        <div class="form-group">
+            <label for="Last"><b>Last Name</b></label>
+            <input type="text" class="form-control" id="last_name" #last_name>
+        </div>
+        <div class="form-group">
+            <label for="Username"><b>Username</b></label>
+            <input type="text" class="form-control" id="username" #username>
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input #location type="text" class="form-control" id="location" />
+        </div>
+      <button style="width: 100%; margin-top: 3%; margin-bottom: 5%;"
+        type="button"
+        (click)="profile(first_name.value,last_name.value,username.value,location.value)"
+        class="btn btn-primary">
+        Profile
+      </button>
+    </form>
+  </div>

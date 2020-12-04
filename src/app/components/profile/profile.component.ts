@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
-import { Admin } from 'src/app/models/admin';
 import { ProfileService } from 'src/app/services/profile.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -9,21 +8,23 @@ import { ProfileService } from 'src/app/services/profile.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  admin:Admin[];
+  error: any;
 
-  getProfile(): void {
-    // this.users = this.homeService.getUsers();
-    this.profileService.getAdminProfile().subscribe((data: Admin[]) => {
-      this.admin = data;
-      console.log('this.users', this.admin);
-    });
-  }
-  constructor(private profileService: ProfileService,
-    private toastr: ToastrService) { }
+  constructor(
+    private profileService: ProfileService,private router: Router) { }
 
   ngOnInit(): void {
-    this.getProfile
-    this.profileService.getAdminProfile()
+
   }
 
+  profile(first_name: string,last_name: string, username: string, location: string) {
+    console.log('first_name,last_name,username,location ', first_name,last_name,username,location);
+
+    this.profileService.profile(first_name,last_name,username,location).subscribe(
+      (success) => {
+        this.router.navigate(['/neighbourhood']);
+      },
+      (error) => (this.error = error)
+    );
+  }
 }
