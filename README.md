@@ -7,7 +7,11 @@ By Felista Kiriinya and Kelvin Keya
 
 ## Live link
 
-Visit the application on 
+Visit the application on https://neighbourhoodgroup.netlify.app/
+
+## Backend Link
+
+The RESTAPIs were created by django, you can find the link on 
 
 ## Figma Link
 
