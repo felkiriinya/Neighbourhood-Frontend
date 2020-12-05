@@ -53,7 +53,7 @@ export class NeighbourhoodComponent implements OnInit {
       this.showUsers =false;
       this.createForm = false;
      this.userService.login;
-    console.log(this.user.username)
+    
   }
 
 }
