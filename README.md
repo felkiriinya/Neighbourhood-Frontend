@@ -12,11 +12,11 @@ Visit the application on https://neighbourhoodgroup.netlify.app/
 
 ## Backend Link
 
-The RESTAPIs were created by django, you can find the link on 
+The RESTAPIs were created by django, you can find the link on https://github.com/RonaldKiprotich/Neighborhood.git
 
 ## Figma Link
 
-This is the link to our [figma]() design 
+This is the link to our [figma](https://1drv.ms/p/s!AhtkLGb6CU57hiSqGNrLiAoko9hL?e=kX3JnE) design. 
 
 ## Development
 
