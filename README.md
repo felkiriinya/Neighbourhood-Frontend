@@ -16,7 +16,7 @@ The RESTAPIs were created by django, you can find the link on https://github.com
 
 ## Figma Link
 
-This is the link to our [figma](https://1drv.ms/p/s!AhtkLGb6CU57hiSqGNrLiAoko9hL?e=kX3JnE) design. 
+This is the link to our [figma](https://www.figma.com/file/Nokhufa9xwHHeT7GGuEVpj/Untitled?node-id=1%3A14) design. 
 
 ## Development
 
